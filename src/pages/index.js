@@ -1,9 +1,11 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Navbar from "../components/navbar"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,6 +27,13 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Router>
+        <Navbar>
+          <Switch>
+            <Route path="/ exact" />
+          </Switch>
+        </Navbar>
+      </Router>
       <Seo title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>

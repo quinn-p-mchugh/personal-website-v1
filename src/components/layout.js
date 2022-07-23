@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Navbar from "./navbar";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -22,12 +24,17 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact />
+        </Switch>
+      </Router>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        Copright © {new Date().getFullYear()} Quinn McHugh. Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://www.gatsbyjs.com">Gatsby JS</a>.
       </footer>
     </div>
   )

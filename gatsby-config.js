@@ -130,12 +130,12 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
     {
-    resolve: "gatsby-plugin-react-svg",
-    options: {
-      rule: {
-        include: /images/
-      }
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
     },
-  }
   ],
 }

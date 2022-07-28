@@ -27,54 +27,55 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <Logo alt="Quinn McHugh Personal Logo" style={{ maxHeight: 100, width: 100 }} />
+            <Logo alt="Quinn McHugh Personal Logo" style={{ height: 100, width: 100 }} />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon icon={click ? faXmark : faBars} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/#about' className='nav-links'>
                 About
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/#blog' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/#blog' className='nav-links'>
                 Blog
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/#resume' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/#resume' className='nav-links'>
                 Resume
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/#projects' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/#projects' className='nav-links'>
                 Projects
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/#design' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/#design' className='nav-links'>
                 Design
               </Link>
             </li>
-          </ul>
-
-          <ul className='social-menu'>
             <li className='nav-item'>
-              <a href="https://www.instagram.com/qm_creative/">
-                <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href="https://www.instagram.com/qm_creative/">
-                <FontAwesomeIcon icon={faGithub} className="social-icon" />
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a href="https://www.instagram.com/qm_creative/">
-                <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-              </a>
+              <ul className={click ? 'social-menu active' : 'social-menu'}>
+                <li>
+                  <a href="https://www.instagram.com/qm_creative/">
+                    <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/qm_creative/">
+                    <FontAwesomeIcon icon={faGithub} className="social-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/qm_creative/">
+                    <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

@@ -33,6 +33,7 @@
     grid-template-columns: repeat(4, auto);
     grid-gap: 0px;
     list-style: none;
+    flex-direction: row;
     text-align: center;
     width: 60vw;
     justify-content: end;
@@ -117,6 +118,18 @@
         z-index: 1;
     }
 
+    .social-menu.active {
+        background: #242222;
+        left: 0;
+        align-items: center;
+            justify-content: center;
+        margin: auto;
+        position: relative;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
     .nav-links {
         text-align: center;
         padding: 2rem;
@@ -132,9 +145,7 @@
 
     .navbar-logo {
         position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
+        left: 1em;
     }
 
     .menu-icon {
